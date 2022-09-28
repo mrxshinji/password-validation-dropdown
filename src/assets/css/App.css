@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body,
+.root,
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #8cccff;
+}
+
+.input-box {
+  position: relative;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+#input-form input {
+  position: relative;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 10px 5px;
+}
+
+/* ======== pwd validation box ======== */
+
+.pwd-validation {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #376488;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.validation-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: .5rem;
+}
+
+.validation-list li {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  color: white;
+}
+
+.radio-icon {
+  scale: 0.8;
+}
+
+.validation-list li.valid {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* validation box animation */
+
+.dropdown-enter {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.dropdown-enter-active {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-exit {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.dropdown-exit-active {
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* validation box animation end*/
+
+/* ======== pwd validation box END ======== */
+
